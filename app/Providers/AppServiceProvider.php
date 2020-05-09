@@ -25,10 +25,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        view()->share('categoires',Category::all());
-        view()->share('pposts',Post::orderBy('hit','DESC')
-        ->leftjoin('categories','posts.id','=','categories.id')
-        ->leftJoin('users','posts.user_id','=','users.id')
-        ->take(3)->get());
+        view()->share('categoires',Category::get());
+        view()->share('pposts',Post::get());
     }
 }
