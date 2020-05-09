@@ -25,7 +25,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        view()->share('categoires',Category::get());
-        view()->share('pposts',Post::get());
+        
+        
     }
 }
